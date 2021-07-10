@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Hind+Madurai&family=Jost:wght@200&family=Open+Sans:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>My Todo List</title>
+</head>
+
+<body>
+  <h1 style="text-align: center; font-family: 'Hind Madurai',cursive; font-size:50px;">My Todo List</h1>
+
+  <div class="container" id="displayTodo">
+    <table class="fl-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Task</th>
+          <th>Platform</th>
+          <th>Tags</th>
+          <th>Done</th>
+        </tr>
+      </thead>
+      <tbody id = "tableBody">
+      </tbody>
+    </table>
+    <div class="misc" style="display: flex; align-items: center; justify-content: space-around; margin-top: 30px;">
+      <button class="btn" onclick="refresh()" style="display: block; background-color: greenyellow;">Refresh</button>
+      <button class="btn" onclick="reset()" style="display: block; background-color: red;">Clear</button>
+    </div>
+  </div>
+
+  <div class="container" id="form">
+    <h1>Add new todo</h3>
+    <div class="frmitem">
+      <label for="task">Problem Name / Description</label>
+      <input type="text" id="task">
+    </div>
+    <div class="frmitem">
+      <label for="task">Topic / Tags</label>
+      <input type="text" id="topic">
+    </div>
+    <div class="frmitem">
+      <label for="task">Problem Link</label>
+      <input type="text" id="link">
+    </div>
+    <div class="frmitem">
+      <label for="task">Platform / Judge</label>
+      <input type="text" id="platform">
+    </div>
+    <button id="frmBtn" onclick="addTask()">Add todo</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
